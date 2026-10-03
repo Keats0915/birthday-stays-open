@@ -16,7 +16,7 @@ const gallery:[string,MemoryKind,string,string][]=[
   ['12-Cloud-Elephant', 'portraits', '云朵围成一圈，小象探出脑袋，人类，和我一起接住这场小雨。', ''],
   ['13-cake', 'sunny', '点着一根蜡烛的小蛋糕', '不用等特别的日子，今天就很好。']
 ];
-export const memories:Memory[]=gallery.map(([file,category,alt,backText],i)=>({id:`doodle-${i+1}`,episode:episodeTitles[category],category,carrier:category==='frames'?'frame':'polaroid',asset:`./memories/${file}.webp`,alt,backText,priority:5}));
+export const memories:Memory[]=gallery.map(([file,category,alt,backText],i)=>({id:`doodle-${i+1}`,episode:episodeTitles[category],category,carrier:category==='frames'?'frame':'polaroid',asset:`./memories/${file}.jpg`,alt,backText,priority:5}));
 export const photo=(index:number)=>memories[((index-1)%memories.length+memories.length)%memories.length];
 export {albums} from './photo-collections';
 export const callFragments=[
