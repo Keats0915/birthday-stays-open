@@ -219,7 +219,7 @@ export function createRoomModel(scene:T.Scene){
   function calendarTexture(actual:boolean){
     const canvas=document.createElement('canvas');canvas.width=512;canvas.height=650;const c=canvas.getContext('2d')!;
     c.fillStyle='#e9d9b7';c.fillRect(0,0,512,650);c.strokeStyle='#a99672';c.lineWidth=2;c.strokeRect(22,22,468,606);c.fillStyle='#573b26';c.textAlign='center';
-    c.font='32px Georgia';c.fillText(actual?'TOMORROW':'TODAY',256,112);c.font='240px Georgia';c.fillText(actual?'02':'01',256,368);
+    c.font='32px Georgia';c.fillText(actual?'TOMORROW':'TODAY',256,112);c.font='240px Georgia';c.fillText(actual?'14':'13',256,368);
     c.font='23px Georgia';c.fillText(actual?'A NEW LITTLE DAY':'ONE SMALL WISH',256,459);c.strokeRect(106,500,300,62);c.font='25px Georgia';c.fillText(actual?'TAKE IT SLOW':'MAKE IT COUNT',256,541);
     const texture=new T.CanvasTexture(canvas);texture.colorSpace=T.SRGBColorSpace;texture.anisotropy=4;ownedTextures.add(texture);return texture;
   }
