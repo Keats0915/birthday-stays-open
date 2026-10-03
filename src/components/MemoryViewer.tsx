@@ -34,7 +34,7 @@ function PolaroidAlbum({ kind }: { kind: MemoryKind }) {
         <span className="polaroid-back"><span className="back-note">{memory.backText}</span><span className="back-signature">小屋 ♡</span></span>
       </span>
     </button>
-    <p className="album-label">{kind === 'together' ? '合照册' : kind === 'portraits' ? '一个人的小事' : kind === 'cats' ? 'many cats' : '留下来的日子'}<span>{index + 1} / {ids.length}</span></p>
+    <p className="album-label">{kind === 'together' ? '合照册' : kind === 'portraits' ? '一个人的旅行会很愉快' : kind === 'cats' ? 'many cats' : '留下来的日子'}<span>{index + 1} / {ids.length}</span></p>
     <div className="object-controls">
       <button aria-label="上一张照片" onClick={() => move(-1)}><ArrowLeft size={18} /></button>
       <button className="flip-control" onClick={flip}><RotateCcw size={13} />{flipped ? '看照片' : '翻到背面'}</button>
